@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tinku Jangra | About Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#ffffff,#eef8ff,#cfeeff);
+overflow-x:hidden;
+}
+
+/* HEADER */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 7%;
+background:rgba(255,255,255,.85);
+backdrop-filter:blur(15px);
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#0099ff;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+transition:.4s;
+}
+
+nav ul li a:hover{
+color:#0099ff;
+}
+
+/* HERO */
+
+.about-hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px;
+background:
+linear-gradient(rgba(255,255,255,.75),
+rgba(173,216,230,.55)),
+url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+}
+
+.about-content{
+max-width:900px;
+}
+
+.about-content h4{
+letter-spacing:3px;
+color:#0099ff;
+margin-bottom:15px;
+}
+
+.about-content h1{
+font-size:75px;
+font-weight:800;
+color:#111;
+}
+
+.about-content h2{
+font-size:35px;
+margin:15px 0;
+color:#0099ff;
+}
+
+.about-content p{
+font-size:18px;
+line-height:1.8;
+color:#444;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:14px 35px;
+background:#0099ff;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+transition:.4s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(0,153,255,.25);
+}
+
+/* ABOUT */
+
+.about-details{
+padding:100px 7%;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,153,255,.18);
+}
+
+.card img{
+width:100%;
+border-radius:20px;
+}
+
+.card h2{
+margin-bottom:20px;
+color:#0099ff;
+}
+
+.card p{
+line-height:1.9;
+color:#555;
+}
+
+/* SERVICES */
+
+.services{
+padding:100px 7%;
+}
+
+.title{
+text-align:center;
+font-size:50px;
+margin-bottom:60px;
+color:#111;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-box{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:.4s;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.service-box:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,153,255,.2);
+}
+
+.service-box h3{
+color:#0099ff;
+margin-bottom:10px;
+}
+
+/* STATS */
+
+.stats{
+padding:80px 7%;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.stat-box{
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.stat-box:hover{
+transform:translateY(-10px);
+}
+
+.stat-box h2{
+font-size:40px;
+color:#0099ff;
+}
+
+.stat-box p{
+margin-top:10px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:100px 7%;
+}
+
+.contact-box{
+background:white;
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.contact-box h2{
+color:#0099ff;
+margin-bottom:20px;
+}
+
+.contact-box p{
+margin:15px 0;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+padding:25px;
+text-align:center;
+background:white;
+margin-top:40px;
+}
+
+/* MOUSE EFFECT */
+
+.cursor{
+width:25px;
+height:25px;
+border:2px solid #0099ff;
+border-radius:50%;
+position:fixed;
+pointer-events:none;
+transform:translate(-50%,-50%);
+z-index:9999;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.about-details{
+grid-template-columns:1fr;
+}
+
+.about-content h1{
+font-size:50px;
+}
+
+.about-content h2{
+font-size:28px;
+}
+
+}
+
+@media(max-width:768px){
+
+.header{
+flex-direction:column;
+padding:15px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+.about-content h1{
+font-size:40px;
+}
+
+.about-content h2{
+font-size:22px;
+}
+
+.about-content p{
+font-size:15px;
+}
+
+.title{
+font-size:35px;
+}
+
+.card,
+.service-box,
+.contact-box{
+padding:25px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="cursor"></div>
+
+<header class="header">
+
+<div class="logo">Tinku Jangra</div>
+
+<nav>
+<ul>
+<li><a href="index.html">home</a></li>
+<li><a href="home.html">mywork</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="skills.html">Skills</a></li>
+
+</ul>
+</ul>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="about-hero">
+
+<div class="about-content">
+
+<h4>WELCOME TO MY PORTFOLIO</h4>
+
+<h1>Tinku Jangra</h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Professional Website Developer, HTML CSS JavaScript Expert,
+Google Ads Specialist and Creative Photo Designer.
+I create modern websites, business websites, travel websites,
+landing pages and creative digital designs.
+</p>
+
+<a href="#contact" class="btn">Hire Me</a>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about-details" id="about">
+
+<div class="card">
+<img src="image 55.png" alt="Your Photo">
+</div>
+
+<div class="card">
+
+<h2>About Me</h2>
+
+<p>
+My name is Tinku Jangra. I am a passionate Website Developer,
+Creative Designer and Google Ads Specialist.
+</p>
+
+<p>
+I create responsive websites using HTML, CSS and JavaScript
+with premium animations, hover effects and modern UI design.
+</p>
+
+<p>
+I also design banners, thumbnails, social media creatives
+and professional branding graphics.
+</p>
+
+<p>
+One of my projects is BH Tour & Travel
+(bhtourandtravel.com), where I created a business-oriented
+travel website with a modern user experience.
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<h2 class="title">My Skills & Services</h2>
+
+<div class="service-grid">
+
+<div class="service-box">
+<h3>Website Development</h3>
+<p>HTML CSS JavaScript Websites</p>
+</div>
+
+<div class="service-box">
+<h3>Google Ads</h3>
+<p>Lead Generation Campaigns</p>
+</div>
+
+<div class="service-box">
+<h3>Photo Designing</h3>
+<p>Creative Graphics & Branding</p>
+</div>
+
+<div class="service-box">
+<h3>SEO Optimization</h3>
+<p>Search Engine Friendly Websites</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats" id="portfolio">
+
+<h2 class="title">Portfolio Highlights</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Projects Completed</p>
+</div>
+
+<div class="stat-box">
+<h2>100%</h2>
+<p>Responsive Design</p>
+</div>
+
+<div class="stat-box">
+<h2>24/7</h2>
+<p>Client Support</p>
+</div>
+
+<div class="stat-box">
+<h2>3+</h2>
+<p>Years Experience</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="contact-box">
+
+<h2>Contact Me</h2>
+
+<p>📞 9354972929</p>
+
+<p>📧 tinkujangra221@gmail.com</p>
+
+<a href="https://wa.me/919354972929" class="btn">
+WhatsApp Me
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Tinku Jangra | All Rights Reserved
+</footer>
+
+<script>
+
+/* Typing Effect */
+
+const words=[
+"Website Developer",
+"Google Ads Expert",
+"Photo Designer",
+"Freelancer"
+];
+
+let i=0;
+let j=0;
+let current="";
+let deleting=false;
+
+function type(){
+
+current=words[i];
+
+if(deleting){
+document.getElementById("typing").textContent=
+current.substring(0,j--);
+}else{
+document.getElementById("typing").textContent=
+current.substring(0,j++);
+}
+
+if(!deleting && j===current.length+1){
+deleting=true;
+setTimeout(type,1000);
+return;
+}
+
+if(deleting && j===0){
+deleting=false;
+i=(i+1)%words.length;
+}
+
+setTimeout(type,deleting?60:120);
+}
+
+type();
+
+/* Mouse Effect */
+
+const cursor=document.querySelector('.cursor');
+
+document.addEventListener('mousemove',(e)=>{
+cursor.style.left=e.clientX+'px';
+cursor.style.top=e.clientY+'px';
+});
+
+</script>
+
+</body>
+</html>
